@@ -1,0 +1,30 @@
+Git复制已有分支到新分支开发
+如果我们需要在现有的分支代码基础上，复制代码到新分支进行开发，并推送至远程仓库，可以进行如下操作：
+注：被复制的分支代码(ibis35)，创建新的分支(ibis35-dev)
+
+1. 通过git bash，切换到被copy的分支（ibis35），并且从远端拉取最新版本
+$ git checkout ibis35
+$ git pull
+
+2. 从当前分支拉copy开发分支
+$ git checkout -b ibis35-dev
+
+3. 把新建的分支push到远端
+$git push origin ibis35-dev
+
+4. 拉取远端分支
+$ git pull (经过验证，当前的分支并没有和本地分支关联，根据提示进行下一步)
+
+5. 关联
+$ git branch --set-upstream-to=origin/ibis35-dev
+或
+$ git branch -u origin/ibis35-dev
+
+6. 再次拉取 验证
+$ git pull
+
+7. 删除远程分支
+$ git push origin --delete ibis35-dev
+
+8. git项目添加一个新的纯空分支
+https://my.oschina.net/fenying/blog/755491

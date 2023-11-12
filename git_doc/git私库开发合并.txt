@@ -1,0 +1,17 @@
+代码分支流程
+1. 在Gitlab上使用"派生"建立自己的私库
+2. clone自己的私库到本地
+3. 切换到自己的工作分支 git checkout <workingbanch> 或者创建自己的新的工作分支 git checkout -b <workingbanch>
+4. 修改代码，本地提交 
+5. git push origin <workingbanch> 把代码推送到自己在gitlab上的私库
+6. 在Gitlab上创建合并请求
+
+1. 添加一个新的remote，使自己本地的私库关联到远程的公库 git remote add upstream <public repo url>
+2. 同步远程的公库代码到本地私库 git pull upstream  <branch-test>. 
+ branch-test远程公库上的分支，如果本地还不存在该分支，需要新建一个同名的分支然后再同步代码
+
+e.g.
+git remote add upstream http://gitlab.geekplus.cc/FED/RMS-fe.git
+git remote add upstream http://gitlab.geekplus.cc/FED/Map-fe.git
+git pull upstream  v4.3.3
+git remote -v  //查看remote

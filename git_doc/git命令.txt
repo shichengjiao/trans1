@@ -1,0 +1,25 @@
+到当前目录
+git init	初始化本地仓库
+git status	仓储状态	(git status -s简单形式)
+git add .	(git add --all)
+新建.gitignore文件，dist（所有dist文件），/dist（根目录下的dist文件）
+git commit -m "v1"
+git log	查看提交日志
+git reset --hard 52ecdd	返回之前某一版本(会删除后面的版本内容，动了HEAD 暂存区 工作目录)
+
+------------------------------------------------------------------------------------
+git reset --soft HEAD^  回滚到刚提交的版本（动了HEAD）
+
+$ git ls-files -s
+100644 35fbd83349cf5962cbef75d9f6340f48be890382 0       file.txt
+$ git cat-file -p 35fbd83349cf5962cbef75d9f6340f48be890382 查看暂存区
+
+git reset [--mixed] commithash filename 重置暂存区
+
+git branch -v	查看各分支的最后一次提交
+git branch -vv	查看各分支的远程跟踪分支
+
+新建分支时指定跟踪的远程分支
+git fetch origin
+git checkout -b ibis35-dev origin/ibis35-dev
+git checkout --track origin/ibis35-dev (本地分支和远程跟踪分支名一样)

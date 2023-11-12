@@ -1,0 +1,5 @@
+git tag			查看标签
+git tag v1.0		创建标签	(git tag v1.0 c0ee2d1)
+git tag -d v1.0		删除标签
+git checkout v1.0	检出标签
+git checkout -b branchName 新建分支，HEAD指向分支名

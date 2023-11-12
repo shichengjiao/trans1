@@ -1,0 +1,16 @@
+git stash
+git status
+git pull
+git stash pop
+
+git stash list
+git stash之前把新增的文件添加到暂存区(git add .)，这样不会污染其他分支
+git stash drop stash@{0} 删除指定的stash
+git stash pop stash@{0} 弹出指定的stash
+
+git 修改重置上次提交的commit:
+git commit --amend
+
+//配置changeId 以后就不用每次写了
+git push origin HEAD:refs/for/develop
+gitdir=$(git rev-parse --git-dir); scp -p -P 29418 shichengjiao_ext@gerrit.cmss.com:hooks/commit-msg ${gitdir}/hooks/

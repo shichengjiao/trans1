@@ -1,0 +1,16 @@
+git remote add origin https://github.com/shichengjiao/dem0-shopping.git  添加本地代码到新建的远程仓库
+git remote	查看远程地址
+git remote -v	查看远程地址
+git push -u origin master  提交到远端主分支（-u关联）
+git pull origin master	 同步远端主分支
+
+git branch		查看分支  （git branch --all）
+git branch v2		新建分支	（git branch v2 c0ee2d1）
+git branch -D v2	删除分支
+git checkout v2	切换分支
+git push -u origin v2	提交到远端v2分支
+
+git checkout master	合并分支
+git merge v2		合并分支
+git add .			解决合并冲突
+git commit		提交合并
